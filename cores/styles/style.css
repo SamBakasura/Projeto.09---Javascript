@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.form{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 8px;
+    gap: 16px;
+}
+
+
+
+
+.btn{
+    padding: 8px;
+    border-radius: 8px;
+}
+.vermelho{
+    color: red;
+}
+.azul{
+    color: blue;
+}
+.verde{
+    color: green;
+}
+.cinza{
+    color: gray;
+}
