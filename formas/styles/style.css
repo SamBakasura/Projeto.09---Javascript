@@ -56,6 +56,18 @@
 }
 
 .girar225{
-    transform: rotate(225deg);
-    margin: 20px;
+    transform: rotate(-225deg);
+    margin-right: 20px;
+}
+
+.esquerda{
+    margin-right: 100px;
+}
+
+.esticado{
+    width: 200px;
+}
+
+.achatado{
+    height: 50px;
 }
