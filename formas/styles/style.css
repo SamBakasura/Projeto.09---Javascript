@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+}
+
+.item{
+    background-color: black;
+    height: 150px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 16px;
+}
+
+.texto{
+    color: white;
+    font-size: 64px;
+
+    -youbkit-touch-callout: none;   /* iOS Safari */
+    -youbkit-user-select: none;     /* Chrome 6.0+, Safari 3.1+, Edge & Opera 15+ */
+    -moz-user-select: none;         /* Firefox */
+    -ms-user-select: none;          /* IE 10+ and Edge */
+    user-select: none;              /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.forma{
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    transition: .4s;
+}
+.forma:hover{
+    cursor: pointer;
+}
+
+.vermelho{
+    background-color: red;
+}
+
+.circulo{
+    border-radius: 50%;
+}
+
+.maior{
+    height: 125px;
+    width: 125px;
+}
+
+.girar225{
+    transform: rotate(225deg);
+    margin: 20px;
+}
