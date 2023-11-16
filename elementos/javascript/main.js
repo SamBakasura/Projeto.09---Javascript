@@ -40,8 +40,8 @@ function gerarNumerosMultiplos () {
     const resultadoMultiplos = document.getElementById('resultado-multiplos');
 
     resultadoMultiplos.textContent = "";
-    for (let contador = 1; contador <= quantidade.value; contador++) {
-        if (contador % 5 == 0) {
+    for (let contador = 0; contador <= quantidade.value; contador++) {
+        if (contador % 5 == 0 && contador != 0) {
             resultadoMultiplos.textContent += contador + " ";
         };
     };
