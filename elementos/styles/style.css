@@ -54,8 +54,18 @@
     height: 50px;
     display: flex;
     align-items: center;
+    gap: 8px;
     overflow-x: scroll;
     white-space: nowrap;
     font-size: inherit;
     padding-inline: 16px;
+}
+
+.item .numeros span { 
+    /* background-color: gold; */
+    height: 30px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
