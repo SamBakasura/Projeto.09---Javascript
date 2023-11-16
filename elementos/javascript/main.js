@@ -4,60 +4,67 @@ const botaoSequencia = document.getElementById('botao-sequencia');
 const botaoImpar = document.getElementById('botao-impar');
 const botaoPar = document.getElementById('botao-par');
 const botaoMultiplos = document.getElementById('botao-multiplos');
+const botaoCalcularTodos = document.getElementById('botao-calcular-todos');
+
+const botaoLimparTodos = document.getElementById('botao-limpar-todos');
+
 const quantidade = document.getElementById('quantidade');
+const resultadoSequencia = document.getElementById('resultado-sequencia');
+const resultadoImpar = document.getElementById('resultado-impar');
+const resultadoPar = document.getElementById('resultado-par');
+const resultadoMultiplos = document.getElementById('resultado-multiplos');
 
 
 function gerarSequencia () {
-    // const quantidade = document.getElementById('quantidade');
-    const resultadoSequencia = document.getElementById('resultado-sequencia');
-
     resultadoSequencia.textContent = '';
     for (let contador = 0; contador <= quantidade.value; contador++){
-        // resultadoSequencia.textContent += contador + ' ';
-        const span = document.createElement('span')
-        span.textContent = contador
-        resultadoSequencia.appendChild(span)
+        const novaSpan = document.createElement('span')
+        novaSpan.textContent = contador
+        resultadoSequencia.appendChild(novaSpan)
     };
 };
 
 function gerarNumerosImpares () {
-    const resultadoImpar = document.getElementById('resultado-impar');
-
     resultadoImpar.textContent = '';
     for (let contador = 1; contador <= quantidade.value; contador+=2){
-        // resultadoImpar.textContent += contador + ' ';
-        const span = document.createElement('span')
-        span.textContent = contador
-        resultadoImpar.appendChild(span)
+        const novaSpan = document.createElement('span')
+        novaSpan.textContent = contador
+        resultadoImpar.appendChild(novaSpan)
     };
 };
 
 
 function gerarNumerosPares () {
-    const resultadoPar = document.getElementById('resultado-par');
-
     resultadoPar.textContent = '';
     for (let contador = 0; contador <= quantidade.value; contador+=2) {
-        // resultadoPar.textContent += contador + ' ';
-        const span = document.createElement('span')
-        span.textContent = contador
-        resultadoPar.appendChild(span)
+        const novaSpan = document.createElement('span')
+        novaSpan.textContent = contador
+        resultadoPar.appendChild(novaSpan)
     };
 };
 
 function gerarNumerosMultiplos () {
-    const resultadoMultiplos = document.getElementById('resultado-multiplos');
-
     resultadoMultiplos.textContent = '';
     for (let contador = 5; contador <= quantidade.value; contador+= 5) {
-        // resultadoMultiplos.textContent += contador + ' ';
-        const span = document.createElement('span')
-        span.textContent = contador
-        resultadoMultiplos.appendChild(span)
+        const novaSpan = document.createElement('span')
+        novaSpan.textContent = contador
+        resultadoMultiplos.appendChild(novaSpan)
     };
 };
+
+function gerarTodos() {
+    gerarSequencia();
+    gerarNumerosImpares();
+    gerarNumerosPares();
+    gerarNumerosMultiplos();
+}
+
+function LimparTodos() {
+    
+}
 
 botaoSequencia.addEventListener('click' , gerarSequencia);
 botaoImpar.addEventListener('click' , gerarNumerosImpares);
 botaoPar.addEventListener('click' , gerarNumerosPares);
 botaoMultiplos.addEventListener('click' , gerarNumerosMultiplos);
+botaoCalcularTodos.addEventListener('click' , gerarTodos)
