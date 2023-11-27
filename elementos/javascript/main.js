@@ -15,9 +15,9 @@ const resultadoPar = document.getElementById('resultado-par');
 const resultadoMultiplos = document.getElementById('resultado-multiplos');
 
 function novaSpan(valor, resultado) {
-        const novaSpan = document.createElement('span')
-        novaSpan.textContent = valor
-        resultado.appendChild(novaSpan)
+    const novaSpan = document.createElement('span')
+    novaSpan.textContent = valor
+    resultado.appendChild(novaSpan)
 }
 
 function gerarSequencia () {
