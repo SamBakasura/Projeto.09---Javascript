@@ -31,4 +31,17 @@ main{
     width: 100%;
     padding: 16px;
     border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.data-container > div {
+    height: 200px;
+    width: 200px;
+    box-shadow: 2px 2px 6px #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
 }
