@@ -14,22 +14,23 @@ const resultadoImpar = document.getElementById('resultado-impar');
 const resultadoPar = document.getElementById('resultado-par');
 const resultadoMultiplos = document.getElementById('resultado-multiplos');
 
+function novaSpan(valor, resultado) {
+        const novaSpan = document.createElement('span')
+        novaSpan.textContent = valor
+        resultado.appendChild(novaSpan)
+}
 
 function gerarSequencia () {
     resultadoSequencia.textContent = '';
     for (let contador = 0; contador <= quantidade.value; contador++){
-        const novaSpan = document.createElement('span')
-        novaSpan.textContent = contador
-        resultadoSequencia.appendChild(novaSpan)
+        novaSpan(contador, resultadoSequencia);
     };
 };
 
 function gerarNumerosImpares () {
     resultadoImpar.textContent = '';
     for (let contador = 1; contador <= quantidade.value; contador+=2){
-        const novaSpan = document.createElement('span')
-        novaSpan.textContent = contador
-        resultadoImpar.appendChild(novaSpan)
+        novaSpan(contador, resultadoImpar);
     };
 };
 
@@ -37,18 +38,14 @@ function gerarNumerosImpares () {
 function gerarNumerosPares () {
     resultadoPar.textContent = '';
     for (let contador = 0; contador <= quantidade.value; contador+=2) {
-        const novaSpan = document.createElement('span')
-        novaSpan.textContent = contador
-        resultadoPar.appendChild(novaSpan)
+        novaSpan(contador, resultadoPar);
     };
 };
 
 function gerarNumerosMultiplos () {
     resultadoMultiplos.textContent = '';
     for (let contador = 5; contador <= quantidade.value; contador+= 5) {
-        const novaSpan = document.createElement('span')
-        novaSpan.textContent = contador
-        resultadoMultiplos.appendChild(novaSpan)
+        novaSpan(contador, resultadoMultiplos);
     };
 };
 
@@ -59,8 +56,13 @@ function gerarTodos() {
     gerarNumerosMultiplos();
 }
 
-function LimparTodos() {
-    
+function limparTodos() {
+    resultadoSequencia.textContent = '';
+    resultadoImpar.textContent = '';
+    resultadoPar.textContent = '';
+    resultadoMultiplos.textContent = '';
+
+    quantidade.value = '';
 }
 
 botaoSequencia.addEventListener('click' , gerarSequencia);
@@ -68,3 +70,4 @@ botaoImpar.addEventListener('click' , gerarNumerosImpares);
 botaoPar.addEventListener('click' , gerarNumerosPares);
 botaoMultiplos.addEventListener('click' , gerarNumerosMultiplos);
 botaoCalcularTodos.addEventListener('click' , gerarTodos)
+botaoLimparTodos.addEventListener('click' , limparTodos)
