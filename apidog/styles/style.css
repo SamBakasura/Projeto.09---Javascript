@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 16px;
+}
+
+header{
+    display: flex;
+    gap: 8px;
+    font-size: 1.5rem;
+}
+
+header input{
+    height: 50px;
+    width: 100%;
+    padding-inline: 8px;
+    font-size: inherit;
+}
+
+header button{
+    height: 50px;
+    width: 200px;
+    font-size: inherit;
+}
+
+.galeria{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 16px;
+}
+
+.galeria img{
+    height: 400px;
+    flex-grow: 1;
+
+    transition: 1s;
+}
+
+.galeria img:hover{
+    transform: scale(1.05);
+}
